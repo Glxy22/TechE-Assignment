@@ -1,0 +1,35 @@
+
+<!doctype html>
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Bubble sort</title>
+</head>
+<body>
+	<script>
+		//selection sort
+				function selsort(array){
+                       
+                       var size = array.length;
+                       for(var i= 0; i< size-1; i++){
+                       var	index = i;
+                         for(var j= i+1; j < size; j++ ){
+                         	if( array[j] < array[index]){
+                         		index = j;
+                         	}
+                         }
+                         var temp = array[i];
+                         array[i]= array[index];
+                         array[index] = temp;
+
+                       }
+                       return array;
+				}
+               const array = [19,17,5,10,8];
+               console.log(selsort(array));
+		</script>
+
+</body>
+</html>
